@@ -1,6 +1,6 @@
 //start your server here
-const server = require("./api/server");
+const server = require("./api/server.js");
 
 server.listen(9000, () => {
-  console.log(`server is running`);
+  console.log("welcome to server");
 });
