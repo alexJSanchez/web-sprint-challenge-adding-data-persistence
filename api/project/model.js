@@ -6,4 +6,7 @@ const getAll = () => {
   // DO YOUR MAGIC
   return db("projects");
 };
-module.exports = { getAll };
+const createProject = () => {
+  return db("resources");
+};
+module.exports = { getAll, createProject };
