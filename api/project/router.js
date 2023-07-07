@@ -2,7 +2,7 @@
 const projectMod = require("../project/model");
 const router = require("express").Router();
 
-router.get("/", async (req, res) => {
+router.get("/projects", async (req, res) => {
   try {
     const projects = await projectMod.getAll();
     res.json(projects);

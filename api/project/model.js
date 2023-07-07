@@ -4,6 +4,6 @@ const db = require("../../data/dbConfig");
 
 const getAll = () => {
   // DO YOUR MAGIC
-  return db("project");
+  return db("projects");
 };
 module.exports = { getAll };
