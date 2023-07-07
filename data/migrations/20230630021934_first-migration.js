@@ -3,11 +3,11 @@
  * @returns { Promise<void> }
  */
 exports.up = async function (knex) {
-  await knex.schema.createTable("projects", (table) => {
-    table.increments("project_id").notNullable();
-    table.string("project_name", 100).notNullable();
+  await knex.schema.createTable("projects", function (table) {
+    table.increments("project_id").primary();
+    table.string("project_name").notNullable();
     table.string("project_description");
-    table.boolean("project_completed");
+    table.boolean("project_completed").defaultTo(0);
   });
 
   await knex.schema.createTable("resources", (table) => {
