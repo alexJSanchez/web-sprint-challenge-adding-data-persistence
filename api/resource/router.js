@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
 		const resources = await resourceMod.getAll();
 		res.status(201).json(resources);
 	} catch (err) {
-		res.json({ message: "cannot find your get all" });
+		res.json({ message: err.message });
 	}
 });
 
