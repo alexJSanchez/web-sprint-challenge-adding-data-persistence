@@ -3,10 +3,11 @@
 const db = require("../../data/dbConfig");
 
 const getAll = () => {
-  // DO YOUR MAGIC
-  return db("projects");
+	// DO YOUR MAGIC
+	return db("projects");
 };
-function createProject(project) {
-  return db("projects").insert(project).returning("*");
-}
+const createProject = async (project) => {
+	const createProject = await db("projects").insert(project).returning("*");
+	return createProject;
+};
 module.exports = { getAll, createProject };
