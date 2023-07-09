@@ -6,7 +6,7 @@ const getAll = () => {
   // DO YOUR MAGIC
   return db("projects");
 };
-const createProject = () => {
-  return db("resources");
-};
+function createProject(project) {
+  return db("projects").insert(project).returning("*");
+}
 module.exports = { getAll, createProject };

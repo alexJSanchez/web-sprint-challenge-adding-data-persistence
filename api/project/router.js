@@ -13,7 +13,7 @@ router.get("/projects", async (req, res) => {
 router.post("/projects", async (req, res) => {
   const project = req.body;
   try {
-    const newProject = await project.createProject(project);
+    const newProject = await projectMod.createProject(project);
     res.status(201).json(newProject[0]);
   } catch (error) {
     res

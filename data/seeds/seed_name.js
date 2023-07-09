@@ -10,6 +10,14 @@ exports.seed = async function (knex) {
     {
       project_name: "sprint1",
       project_description: "first project",
+      project_completed: false,
+    },
+  ]);
+  await knex("resources").del();
+  await knex("resources").insert([
+    {
+      resource_name: "first resource",
+      resource_description: "descrption",
     },
   ]);
 };
