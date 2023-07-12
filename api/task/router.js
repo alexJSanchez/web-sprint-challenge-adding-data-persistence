@@ -1,5 +1,6 @@
 // build your `/api/tasks` router here
 const taskMod = require("../task/model");
+const projectMod = require("../project/model");
 const router = require("express").Router();
 
 router.get("/", async (req, res) => {

@@ -24,7 +24,7 @@ exports.seed = async function (knex) {
 	await knex("tasks").del();
 	await knex("tasks").insert([
 		{
-			task_description: "descrption",
+			task_description: 1,
 			task_notes: "first resource",
 			task_completed: false,
 			project_id: 1,
