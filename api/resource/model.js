@@ -5,8 +5,7 @@ const getAll = () => {
 	// DO YOUR MAGIC
 	return db("resources");
 };
-const createProject = async (resource) => {
-	const createResource = await db("resources").insert(resource).returning("*");
-	return createResource;
+const createProject = (resource) => {
+	return db("resources").insert(resource).returning("*");
 };
 module.exports = { getAll, createProject };

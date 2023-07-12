@@ -11,8 +11,8 @@ const getAll = () => {
 		}))
 	);
 };
-const createProject = async (project) => {
-	const createProject = await db("projects")
+const createProject = (project) => {
+	return db("projects")
 		.insert(project)
 		.returning("*")
 		.then((projects) =>
@@ -21,8 +21,6 @@ const createProject = async (project) => {
 				project_completed: proj.project_completed ? true : false,
 			}))
 		);
-
-	return createProject;
 };
 module.exports = { getAll, createProject };
 
